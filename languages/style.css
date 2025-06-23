@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 1000vh;
+    background: #1c093d url("code_logo.svg") repeat;
+}
+
+header {
+    color: white;
+    background-color: #6d3dc1;
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    h4 {
+        font-size: min(30px, 5vw);
+    }
+    z-index: 99;
+}
+
+.large-text-box {
+    color: white;
+    background-color: #a58cd038;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 50px;
+}
+
+#section-1 {
+    position: absolute;
+    top: 120px;
+    display: flex;
+    gap: 30px;
+    padding: 0 30px;
+
+    .large-text-box {
+        border: 5px solid #af94dd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: 5rem;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#language-grid {
+    height: 500px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    .language-grid-item {
+        border-radius: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .language-grid-item:hover {
+        filter: brightness(0.9);
+        outline: 5px solid white;
+    }
+
+    /* Language grid items */
+    #python-grid-item {
+        background-color: #5f9fff;
+    }
+
+    #js-grid-item {
+        background-color: #ffbb0f;
+
+        p {
+            color: black;
+        }
+    }
+
+    #c-grid-item {
+        background-color: #1d55a9;
+    }
+
+    #cpp-grid-item {
+        background-color: #093d89;
+    }
+
+    #rust-grid-item {
+        background-color: #944b02;
+    }
+
+    #java-grid-item {
+        background-color: #dddddd;
+
+        p {
+            color: black;
+        }
+    }
+
+    #cs-grid-item {
+        background-color: #6d3dc1;
+    }
+
+    #ts-grid-item {
+        background-color: #0444a5;
+    }
+
+    #bash-grid-item {
+        background-color: #202020;
+    }
+    p {
+        color: white;
+    }
+}
