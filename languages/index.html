@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Guide to Programming Languages</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Charts.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
     </header>
     <main>
     <div id="section-1">
-        <div class="large-text-box">
-            <h1><span>WHAT LANGUAGE</span><br><span>IS RIGHT FOR YOU?</span></h1>
+        <div id="title-box">
+            <h1><span>WHICH LANGUAGE</span><br><span>IS RIGHT FOR YOU?</span></h1>
             <p class="description">
                 Have you ever wondered, out of the dozens of
                 programming languages, just which one is best for you?
@@ -188,10 +188,60 @@
         </div>
     </div>
 
-    <div class="heading glow" id="section-3-heading">
+    <div class="heading glow" id="chart-heading">
         POPULARITIES
     </div>
+
+    <div id="chart">
+        <table class="charts-css column show-heading show-labels show-primary-axis show-data-axes show-10-secondary-axes data-spacing-10" id="table">
+            <caption>The 10 Most Popular Programming Languages</caption>
+            <tbody class="glow">
+                <tr>
+                    <th scope="row">JavaScript</th>
+                    <td style="--size: 0.6536;">65.36%</td>
+                </tr>
+                <tr>
+                    <th scope="row">HTML/CSS</th>
+                    <td style="--size: 0.5508;">55.08%</td>
+                </tr>
+                <tr>
+                    <th scope="row">SQL</th>
+                    <td style="--size: 0.4947;">49.47%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Python</th>
+                    <td style="--size: 0.4807;">48.07%</td>
+                </tr>
+                <tr>
+                    <th scope="row">TypeScript</th>
+                    <td style="--size: 0.3483;">34.83%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Java</th>
+                    <td style="--size: 0.3327;">33.27%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Bash</th>
+                    <td style="--size: 0.2907;">29.07%</td>
+                </tr>
+                <tr>
+                    <th scope="row">C#</th>
+                    <td style="--size: 0.2798;">27.98%</td>
+                </tr>
+                <tr>
+                    <th scope="row">C++</th>
+                    <td style="--size: 0.2255;">22.55%</td>
+                </tr>
+                <tr>
+                    <th scope="row">PHP</th>
+                    <td style="--size: 0.2087;">20.87%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     </main>
+    
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
