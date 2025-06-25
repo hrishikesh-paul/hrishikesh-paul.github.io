@@ -1,26 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Source Sans 3", "Verdana", sans-serif;
     box-sizing: border-box;
+}
+
+:root {
+    --main-color: #6d3dc1;
+    --main-color-dark: #371e61;
+    --glow-color: #8011c1a2;
 }
 
 body {
     height: 1000vh;
     background: #1c093d url("code_logo.svg") repeat;
+    color: white;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 20px;
+    padding-top: 20px;
 }
 
 header {
-    color: white;
-    background-color: #6d3dc1;
+    /* visibility: hidden; */
+    background-color: var(--main-color);
+    box-shadow: 0 5px 30px 10px var(--main-color-dark);
     height: 100px;
     width: 100vw;
     position: fixed;
+    top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
+    padding: 0 40px 0 20px;
+
     h4 {
         font-size: min(30px, 5vw);
     }
@@ -28,27 +48,26 @@ header {
 }
 
 .large-text-box {
-    color: white;
-    background-color: #a58cd038;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px) brightness(2);
     padding: 20px;
     border-radius: 50px;
 }
 
 #section-1 {
-    position: absolute;
-    top: 120px;
     display: flex;
     gap: 30px;
-    padding: 0 30px;
+    padding: 0 20px;
 
     .large-text-box {
-        border: 5px solid #af94dd;
+        background-color: #a58cd038;
+        border: solid #af94dd;
+        border-width: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         h1 {
+            white-space: nowrap;
             font-size: 5rem;
             line-height: 1;
         }
@@ -72,10 +91,10 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        filter: brightness(0.5);
     }
 
     .language-grid-item:hover {
-        filter: brightness(0.9);
         outline: 5px solid white;
     }
 
@@ -123,7 +142,59 @@ header {
     #bash-grid-item {
         background-color: #202020;
     }
-    p {
-        color: white;
+}
+
+.heading {
+    background-color: var(--main-color-dark);
+    border: 5px solid var(--main-color);
+    border-radius: 50px;
+    height: 150px;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 3rem;
+    display: grid;
+    place-content: center;
+}
+
+.glow {
+    position: relative;
+    box-shadow: 0 0 10px 10px var(--glow-color);
+}
+
+.language-section {
+    height: 400px;
+    display: flex;
+
+    .language-desc {
+        overflow: hidden;
+        position: relative;
+        width: 60%;
+        background-color: white;
+        color: black;
+
+        h1 {
+            position: absolute;
+            top: 0px;
+            padding: 20px;
+            font-size: 4rem;
+        }
+
+        p {
+            position: absolute;
+            top: 100px;
+            padding: 20px;
+            font-size: 1rem;
+        }
+    }
+
+    code {
+        white-space: nowrap;
+        overflow: scroll;
+        scrollbar-width: none;
+        font-family: "DM Mono", "Courier New", monospace;
+        font-size: 0.9rem;
+        width: 40%;
+        padding: 20px;
+        background-color: #1d1d1d;
     }
 }

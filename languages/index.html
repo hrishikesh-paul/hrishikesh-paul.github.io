@@ -14,10 +14,10 @@
         <h4>Your Guide to Programming Languages</h4>
         <p>Hrishikesh Paul</p>
     </header>
-
+    <main>
     <div id="section-1">
         <div class="large-text-box">
-            <h1>WHAT LANGUAGE<br>IS RIGHT FOR YOU?</h1>
+            <h1><span>WHAT LANGUAGE</span><br><span>IS RIGHT FOR YOU?</span></h1>
             <p class="description">
                 Have you ever wondered, out of the dozens of
                 programming languages, just which one is best for you?
@@ -65,6 +65,133 @@
         </div>
     </div>
 
+    <div class="heading glow" id="section-2-heading">
+        AN OVERVIEW OF THE LANGUAGES
+    </div>
+
+    <div id="section-2">
+        <div class="language-section" id="python-section">
+            <div class="language-desc">
+                <div class="language-desc-bg"></div>
+                <h1>Python</h1>
+                <p>Language description. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <code>
+                # Python code to print "Hello, World!"<br>
+                print("Hello, World!")<br>
+                <br>
+                # Python code to add two numbers<br>
+                def add_numbers(x, y):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return x + y<br>
+                <br>
+                result = add_numbers(5, 3)<br>
+                print(result)
+            </code>
+        </div>
+        <div class="language-section" id="js-section">
+            <code>
+                // JavaScript code to print "Hello, World!"<br>
+                console.log("Hello, World!");<br>
+                <br>
+                // JavaScript code to add two numbers<br>
+                function addNumbers(x, y) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return x + y;<br>
+                }<br>
+                <br>
+                let result = addNumbers(5, 3);<br>
+                console.log(result);
+            </code>
+            <div class="language-desc">
+                <div class="language-desc-bg"></div>
+                <h1>JavaScript</h1>
+                <p>Language description. Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="language-section" id="c-section">
+            <div class="language-desc">
+                <div class="language-desc-bg"></div>
+                <h1>C</h1>
+                <p>Language description. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <code>
+                // C code to print "Hello, World!"<br>
+                #include &lt;stdio.h&gt;<br>
+                <br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("Hello, World!\n");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                }<br>
+                <br>
+                // C code to add two numbers<br>
+                #include &lt;stdio.h&gt;<br>
+                <br>
+                int add(int x, int y) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return x + y;<br>
+                }<br>
+                <br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int sum = add(5, 3);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;printf("%d\n", sum);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                }
+            </code>
+        </div>
+        <div class="language-section" id="cpp-section">
+            <code>
+                // C++ code to print "Hello, World!"<br>
+                #include &lt;iostream&gt;<br>
+                <br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                }<br>
+                <br>
+                // C++ code to add two numbers<br>
+                #include &lt;iostream&gt;<br>
+                <br>
+                int add(int x, int y) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return x + y;<br>
+                }<br>
+                <br>
+                int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;int sum = add(5, 3);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; sum &lt;&lt; std::endl;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                }
+            </code>
+            <div class="language-desc">
+                <div class="language-desc-bg"></div>
+                <h1>C++</h1>
+                <p>Language description. Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="language-section" id="rust-section">
+            <div class="language-desc">
+                <div class="language-desc-bg"></div>
+                <h1>Rust</h1>
+                <p>Language description. Lorem ipsum dolor sit amet.</p>
+            </div>
+            <code>
+                fn main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Rust code to print "Hello, World!"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;println!("Hello, World!");<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Rust code to add two numbers<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;fn add_numbers(x: i32, y: i32) -> i32 {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x + y<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let result = add_numbers(5, 3);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;println!("{}", result);<br>
+                }
+            </code>
+        </div>
+    </div>
+
+    <div class="heading glow" id="section-3-heading">
+        POPULARITIES
+    </div>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
