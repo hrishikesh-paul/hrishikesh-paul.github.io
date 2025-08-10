@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Align everything in <main> top-to-bottom */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Default button styling */
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+:root {
+    --header-color: #285714;
+}
+
+header {
+    height: min(70px, 20vh);
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--header-color);
+    color: white;
+}
+
+#main-section {
+    #main-background {
+        object-fit: cover;
+        width: 100%;
+        height: min(100vw, 600px);
+
+        /* Position behind everything. */
+        position: absolute;
+        z-index: -999;
+
+        filter: brightness(0.5);
+    }
+
+    #main-text {
+        height: min(100vw, 600px);  /* Same height as image */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+
+        h2 {
+            font-size: min(5vw, 100px);
+            text-align: center;
+            color: white;
+        }
+
+        button {
+            font-size: min(2.5vw, 20px);
+            padding: min(3vw, 30px) min(6vw, 60px);
+            background-color: #459721;
+            color: white;
+        }
+    }
+}
+
+#what-is-vegansearch {
+    background-color: rgb(255, 244, 200);
+    height: 600px;
+}
