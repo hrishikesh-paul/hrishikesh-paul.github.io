@@ -10,11 +10,15 @@
 
 :root {
     --header-color: #285714;
+    --header-height: min(70px, 15vw);
     --wood-texture: url("/wood_texture.jpg");
 }
 
-/* Align everything in <main> top-to-bottom */
 main {
+    /* Make space for the header */
+    padding-top: var(--header-height);
+
+    /* Align everything in <main> top-to-bottom */
     display: flex;
     flex-direction: column;
 }
@@ -32,7 +36,7 @@ button {
 }
 
 header {
-    height: min(70px, 15vw);
+    height: var(--header-height);
     width: 100%;
     padding: 0 20px;
     /* Fix the header to the top of the screen,
@@ -60,7 +64,7 @@ header {
     #main-background {
         object-fit: cover;
         width: 100%;
-        height: min(100vw, 600px);
+        height: 600px;
 
         /* Position behind everything. */
         position: absolute;
@@ -70,7 +74,7 @@ header {
     }
 
     #main-text {
-        height: min(100vw, 600px);  /* Same height as image */
+        height: 600px;  /* Same height as image */
 
         display: flex;
         flex-direction: column;
