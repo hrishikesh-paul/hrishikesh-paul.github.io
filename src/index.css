@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Funnel Sans", -apple-system, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  /* Theme colors */
+  --navbar-bg: #9cff6e;
+  --main-bg: #fff6c0;
+  --filters-tab-bg: #ffcf9b;
+  --recipe-window-bg: #f5deb3;
+  --accent-color: #fe7f4c;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  background-color: var(--main-bg);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--navbar-bg);
+  height: 70px;
+  padding: 0 min(5vw, 30px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > svg {
+  cursor: pointer;
+}
+
+#heading-section {
+  background-size: cover;
+  background-position: center;
+  /* Override theme font color (looks better in white) */
+  color: white;
+  text-align: center;
+}
+
+#heading-section-text {
+  backdrop-filter: contrast(1.5) brightness(0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 70px);
+}
+
+#heading-section h1 {
+  font-size: 5em;
+}
+
+#heading-section p {
+  font-size: min(6vw, 2em);
+}
+
+#heading-section #heading-section-caption {
+  font-size: 1em;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#filters-tab {
+  background-color: var(--filters-tab-bg);
+  padding: 10px min(5vw, 30px);
+  display: flex;
+  cursor: pointer;
+}
+
+/* Drop-down arrow */
+#filters-tab > svg {
+  /* Point arrow upwards when the
+    drop-down menu is collapsed. */
+  transform: rotate(180deg);
+  /* Ease in-out sine */
+  transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/* If #filters-menu has the .closed class... */
+#root:has(#filters-menu.closed) {
+  /* ...rotate the drop-down arrow downwards */
+  #filters-tab > svg {
+    transform: rotate(0deg);
+  }
+}
+
+/* Recipe card container */
+#cards {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: var(--main-bg);
+}
+
+/* Load more button */
+#load-more {
+  width: max-content;
+  margin: 20px auto 30px;
+  padding: 20px 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 20px;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+#load-more.disabled {
+  filter: grayscale();
+  opacity: 50%;
+  cursor: default;
+}

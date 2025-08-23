@@ -1,0 +1,26 @@
+/* Each recipe card */
+.recipe-card {
+  position: relative;
+  aspect-ratio: 1 / 2; /* Make the elements tall... */
+  max-height: 500px; /* ...but not too tall */
+  display: inline-block;
+  clip-path: inset(0 round 20px);  /* Round corners by 20px */
+  cursor: pointer;
+
+  flex: 1 0 200px;
+}
+
+.recipe-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-card > h2 {
+  position: absolute;
+  bottom: 0;
+
+  padding: 10px;
+  backdrop-filter: blur(2px) brightness(0.6);
+  color: white;
+}
